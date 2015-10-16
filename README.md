@@ -34,7 +34,29 @@ Now you can access the user's settings using the `$userSettings` service in scri
 ```javascript
 ngModule.controller('YourController', function($userSettings){
   
+  $userSettings.set('foo', true);
+  $userSettings.get('foo'); // => true
+  
+  $userSettings.set('foo', 'bar');
+  $userSettings.get('foo'); // => 'bar'
+  
+  $userSettings.set('foo', { foo: 'bar' });
+  $userSettings.get('foo'); // => { foo: 'bar' }
+  
 });
+```
+
+or using the `user-settings` directive in your views:
+
+```xml
+<!-- grab a handle to the settings using user-settings attribute -->
+<section user-settings>
+
+  <a ng-click="$userSettings.set('foo', 'bar')">Set foo to bar</a>
+  
+  <p>Foo: {{ $userSettings.get('foo') }}</p>
+  
+</section>
 ```
 
 To keep the markup as DRY as possible, there is a `user-setting` attribute available to grab an individual setting and expose it using `$userSetting` to the child elements:
