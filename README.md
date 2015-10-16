@@ -1,4 +1,4 @@
-# Angular Settings
+# Angular User Settings
 
 [![Build Status](https://travis-ci.org/jvandemo/angular-user-settings.png?branch=master)](https://travis-ci.org/jvandemo/angular-user-settings)
 
