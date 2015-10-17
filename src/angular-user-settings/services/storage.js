@@ -1,6 +1,6 @@
 (function (angular) {
 
-  var localStoragePrefix = 'angularUserSettings';
+  var localStoragePrefix = 'angularUserSettings:';
 
   angular
     .module('angularUserSettings.services')
@@ -26,7 +26,7 @@
     this._settings = {};
 
     this._getLocalStorageKey = function(key){
-      return localStoragePrefix + ':' + key;
+      return localStoragePrefix + key;
     };
 
     this.setItem = function(key, value){
