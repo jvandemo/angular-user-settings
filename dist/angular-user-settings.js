@@ -88,39 +88,7 @@
 
 (function (angular) {
 
-  angular
-    .module('angularUserSettings.directives')
-    .directive('userSetting', createDirectiveDDO);
-
-  function createDirectiveDDO(){
-    return {
-      restrict: 'A',
-      scope: true,
-      controller: 'angularUserSettings.UserSettingController',
-      controllerAs: '$userSetting'
-    };
-  }
-
-})(angular);
-
-(function (angular) {
-
-  angular
-    .module('angularUserSettings.directives')
-    .directive('userSettings', createDirectiveDDO);
-
-  function createDirectiveDDO(){
-    return {
-      restrict: 'A',
-      controller: 'angularUserSettings.UserSettingsController'
-    };
-  }
-
-})(angular);
-
-(function (angular) {
-
-  var localStoragePrefix = 'angularUserSettings';
+  var localStoragePrefix = 'angularUserSettings:';
 
   angular
     .module('angularUserSettings.services')
@@ -146,7 +114,7 @@
     this._settings = {};
 
     this._getLocalStorageKey = function(key){
-      return localStoragePrefix + ':' + key;
+      return localStoragePrefix + key;
     };
 
     this.setItem = function(key, value){
@@ -286,5 +254,37 @@
   }
 
 
+
+})(angular);
+
+(function (angular) {
+
+  angular
+    .module('angularUserSettings.directives')
+    .directive('userSetting', createDirectiveDDO);
+
+  function createDirectiveDDO(){
+    return {
+      restrict: 'A',
+      scope: true,
+      controller: 'angularUserSettings.UserSettingController',
+      controllerAs: '$userSetting'
+    };
+  }
+
+})(angular);
+
+(function (angular) {
+
+  angular
+    .module('angularUserSettings.directives')
+    .directive('userSettings', createDirectiveDDO);
+
+  function createDirectiveDDO(){
+    return {
+      restrict: 'A',
+      controller: 'angularUserSettings.UserSettingsController'
+    };
+  }
 
 })(angular);

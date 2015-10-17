@@ -1,11 +1,20 @@
 {
   "name": "angular-user-settings",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
     {
       "name": "Jurgen Van de Moere",
       "email": "jurgen.van.de.moere@gmail.com"
     }
+  ],
+  "keywords": [
+    "angular",
+    "angularjs",
+    "user settings",
+    "settings",
+    "preferences",
+    "storage",
+    "localStorage"
   ],
   "main": ["dist/angular-user-settings.js"],
   "ignore": [
