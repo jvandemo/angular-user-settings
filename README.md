@@ -5,9 +5,11 @@
 Easily manage persistent user settings in your AngularJS application:
 
 - very lightweight (~2KB)
-- settings are automatically persisted across browser sessions using local storage
+- no external dependencies
+- settings are automatically persisted across browser sessions when localStorage is available
+- gracefully falls back when localStorage is not available
 - easily access user settings from your script using the `$userSettings` service
-- easily access user settings from your views using `user-settings` and `user-setting` attributes
+- easily access user settings from your views using `user-settings` and `user-setting` directives
 
 ## Usage
 
