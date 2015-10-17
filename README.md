@@ -13,6 +13,8 @@ Easily manage persistent user-specific settings in your AngularJS application:
 
 From both your scripts and views!
 
+[View online demo](http://angular-user-settings-demo.surge.sh/)
+
 ## Usage
 
 First install the module using bower:
