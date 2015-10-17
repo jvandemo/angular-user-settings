@@ -190,10 +190,16 @@ $ gulp test-dist-minified
 
 ## Change log
 
+### v0.2.0
+
+- Added $userSetting directive
+- Added unit tests
+- Added initial documentation
+
 ### v0.1.0
 
 - Added $userSettings service
 - Added storage service
-- Added setting directive
+- Added userSettings directive
 - Added unit tests
 - Added initial documentation
