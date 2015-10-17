@@ -96,11 +96,11 @@ Get setting for key.
 
 ##### Arguments
 
-None.
+- **key** - {string} - key to identify setting, required
 
 ##### Returns
 
-Any.
+{any} - setting value
 
 ### $userSettings.set(key, value)
 
@@ -108,7 +108,8 @@ Set value for key.
 
 ##### Arguments
 
-None.
+- **key** - {string} - key to identify setting, required
+- **value** - {any} - value to assign to setting, required
 
 ##### Returns
 
@@ -120,7 +121,7 @@ Set value for key to true.
 
 ##### Arguments
 
-None.
+- **key** - {string} - key to identify setting, required
 
 ##### Returns
 
@@ -132,7 +133,7 @@ Set value for key to false.
 
 ##### Arguments
 
-None.
+- **key** - {string} - key to identify setting, required
 
 ##### Returns
 
@@ -144,11 +145,11 @@ Check if setting is truthy or not.
 
 ##### Arguments
 
-None.
+- **key** - {string} - key to identify setting, required
 
 ##### Returns
 
-boolean.
+Boolean
 
 ### $userSettings.disabled(key)
 
@@ -156,11 +157,11 @@ Check if setting is falsy or not.
 
 ##### Arguments
 
-None.
+- **key** - {string} - key to identify setting, required
 
 ##### Returns
 
-boolean.
+Boolean
 
 ## Contribute
 
