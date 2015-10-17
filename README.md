@@ -2,14 +2,16 @@
 
 [![Build Status](https://travis-ci.org/jvandemo/angular-user-settings.png?branch=master)](https://travis-ci.org/jvandemo/angular-user-settings)
 
-Easily manage persistent user settings in your AngularJS application:
+Easily manage persistent user-specific settings in your AngularJS application:
 
 - very lightweight (~2KB)
 - no external dependencies
-- settings are automatically persisted across browser sessions when localStorage is available
-- gracefully falls back when localStorage is not available
-- easily access user settings from your script using the `$userSettings` service
-- easily access user settings from your views using `user-settings` and `user-setting` directives
+- no database or backend required
+- works out-of-the-box, no configuration required
+- settings are automatically persisted across browser sessions using localStorage
+- gracefully falls back to non-persistent settings when [localStorage is not available](http://caniuse.com/#search=localstorage)
+
+From both your scripts and views!
 
 ## Usage
 
@@ -51,7 +53,8 @@ ngModule.controller('YourController', function($userSettings){
 or using the `user-settings` directive in your views:
 
 ```xml
-<!-- grab a handle to the settings using user-settings attribute -->
+<!-- adding the user-settings attribute to an element -->
+<!-- conveniently exposes the $userSettings service in your view -->
 <section user-settings>
 
   <a ng-click="$userSettings.set('foo', 'bar')">Set foo to bar</a>
@@ -64,7 +67,8 @@ or using the `user-settings` directive in your views:
 To keep the markup as DRY as possible, there is a `user-setting` attribute available to grab an individual setting and expose it using `$userSetting` to the child elements:
 
 ```xml
-<!-- grab a handle to a setting with key "debug-mode" -->
+<!-- instead of exposing all settings, we grab an individual setting -->
+<!-- that is exposed as $userSetting -->
 <section user-setting="debug-mode">
 
   <!-- if the setting is enabled -->
