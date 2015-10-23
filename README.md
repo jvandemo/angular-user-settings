@@ -66,6 +66,8 @@ or using the `user-settings` directive in your views:
 </section>
 ```
 
+Whatever you store in `$userSettings` is automatically persisted across browser sessions and restored when the user comes back at a later time.
+
 To keep the markup as DRY as possible, there is a `user-setting` attribute available to grab an individual setting and expose it using `$userSetting` to the child elements:
 
 ```xml
